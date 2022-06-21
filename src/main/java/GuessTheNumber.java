@@ -37,7 +37,7 @@ public class GuessTheNumber {
             String playAnswer = s.nextLine();
 
             if (playAnswer.compareTo("n") == 0) break;
-            if (playAnswer.compareTo("y") != 0) {
+            else if (playAnswer.compareTo("y") != 0) {
                 System.out.println("A \"y\" or \"n\" wasn't detected.");
                 System.out.println("I'll just assume you meant yes. for simplicity's sake.");
             }
