@@ -46,7 +46,7 @@ public class GuessTheNumber {
             if (playAnswer.compareTo("n") == 0) break;
             else if (playAnswer.compareTo("y") != 0) {
                 System.out.println("A \"y\" or \"n\" wasn't detected.");
-                System.out.println("I'll just assume you meant yes. for simplicity's sake.");
+                System.out.println("I'll just assume you meant yes for simplicity's sake.");
             }
 
         }
