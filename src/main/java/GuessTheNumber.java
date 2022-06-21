@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GuessTheNumber {
@@ -26,9 +27,15 @@ public class GuessTheNumber {
                 }
 
                 System.out.println("Take a guess.");
-                guess = s.nextInt();
+                try {
+                    guess = s.nextInt();
+                    numGuesses++;
+                } catch (InputMismatchException ime) {
+                    System.out.println("Please enter a number.");
+                    guess = -999;
+                }
                 s.nextLine(); // clears out newline for playAnswer y/n
-                numGuesses++;
+
             } while (guess != number);
 
             System.out.println("Good job, " + name + "! You guessed my number in " + numGuesses + " guesses!");
